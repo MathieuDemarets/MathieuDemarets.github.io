@@ -2,14 +2,116 @@
 "0","library(magrittr) #chained commands"
 "0","library(readxl) #import excel"
 "0","library(dplyr) #mutate"
+"2","
+Attachement du package : ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
 "0","library(stringr) #str_replace"
 "0","library(plyr) #revalue"
+"2","------------------------------------------------------------------------------------------------------------------------------------
+"
+"2","You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+"
+"2","------------------------------------------------------------------------------------------------------------------------------------
+"
+"2","
+Attachement du package : ‘plyr’
+
+"
+"2","The following objects are masked from ‘package:dplyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise, summarize
+
+"
 "0","library(GGally) #ggpairs"
+"2","Le chargement a nécessité le package : ggplot2
+"
+"2","Registered S3 method overwritten by 'GGally':
+  method from   
+  +.gg   ggplot2
+"
 "0","library(ggplot2)"
 "0","library(rstatix)"
+"2","
+Attachement du package : ‘rstatix’
+
+"
+"2","The following objects are masked from ‘package:plyr’:
+
+    desc, mutate
+
+"
+"2","The following object is masked from ‘package:stats’:
+
+    filter
+
+"
 "0","library(hrbrthemes)"
+"2","Registering Windows fonts with R
+"
+"2","NOTE: Either Arial Narrow or Roboto Condensed fonts are required to use these themes.
+"
+"2","      Please use hrbrthemes::import_roboto_condensed() to install Roboto Condensed and
+"
+"2","      if Arial Narrow is not on your system, please see https://bit.ly/arialnarrow
+"
 "0","library(plotly)"
+"2","Registered S3 method overwritten by 'data.table':
+  method           from
+  print.data.table     
+"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"2","
+Attachement du package : ‘plotly’
+
+"
+"2","The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+"
+"2","The following objects are masked from ‘package:plyr’:
+
+    arrange, mutate, rename, summarise
+
+"
+"2","The following object is masked from ‘package:stats’:
+
+    filter
+
+"
+"2","The following object is masked from ‘package:graphics’:
+
+    layout
+
+"
 "0","library(timeDate)"
 "0","library(tidyr)"
+"2","
+Attachement du package : ‘tidyr’
+
+"
+"2","The following object is masked from ‘package:magrittr’:
+
+    extract
+
+"
 "0","library(formula.tools)"
+"2","formula.tools-1.7.1 - Copyright © 2022 Decision Patterns
+"
 "0","library(stringr)"

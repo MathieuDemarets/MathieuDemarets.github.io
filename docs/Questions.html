@@ -2147,11 +2147,11 @@ Use Cases
 <ul>
 <li><a href="#pemdas" id="toc-pemdas">1 PEMDAS</a>
 <ul>
-<li><a href="#function" id="toc-function">1.1 Function</a></li>
+<li><a href="#fonction" id="toc-fonction">1.1 Fonction</a></li>
 <li><a href="#exercices" id="toc-exercices">1.2 Exercices</a></li>
 </ul></li>
 <li><a href="#division" id="toc-division">2. DIVISION</a></li>
-<li><a href="#function-1" id="toc-function-1">2.1 Function</a>
+<li><a href="#fonction-1" id="toc-fonction-1">2.1 Fonction</a>
 <ul>
 <li><a href="#exercices-1" id="toc-exercices-1">2.2 Exercices</a>
 <ul>
@@ -2163,7 +2163,7 @@ Use Cases
 </nav>
 </div>
 <h1 id="pemdas">1 PEMDAS</h1>
-<h2 id="function">1.1 Function</h2>
+<h2 id="fonction">1.1 Fonction</h2>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
@@ -2204,46 +2204,81 @@ hide
 hide
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>Ex.PEMDAS</span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>5</span>,<span class='fl'>10</span><span class='op'>)</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>Ex.PEMDAS</span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>5</span>,<span class='fl'>10</span><span class='op'>)</span></span></code></pre>
 </div>
 </details>
 <pre><code>[1] &quot;Question numéro 1&quot;
 $Question
-[1] &quot;10 + 3 - 2 * 7 + 7 = ?&quot;
+[1] &quot;9 + 9 * 7 / 9 + 4 = ?&quot;
 
 $Réponse
-[1] 6
+[1] 20
 
 [1] &quot;Question numéro 2&quot;
 $Question
-[1] &quot;10 * 9 / 9 * 2 ** 6 = ?&quot;
+[1] &quot;7 + 10 - 8 * 6 + 1 = ?&quot;
 
 $Réponse
-[1] 640
+[1] -30
 
 [1] &quot;Question numéro 3&quot;
 $Question
-[1] &quot;7 ** 3 + 2 + 1 - 7 = ?&quot;
+[1] &quot;3 + 7 * 7 - 9 - 1 = ?&quot;
 
 $Réponse
-[1] 339
+[1] 42
 
 [1] &quot;Question numéro 4&quot;
 $Question
-[1] &quot;1 - 5 + 2 + 2 * 4 = ?&quot;
+[1] &quot;7 * 6 + 5 * 3 + 2 = ?&quot;
 
 $Réponse
-[1] 6
+[1] 59
 
 [1] &quot;Question numéro 5&quot;
 $Question
-[1] &quot;9 * 3 - 8 / 2 * 7 = ?&quot;
+[1] &quot;7 ** 1 - 5 - 5 - 4 = ?&quot;
 
 $Réponse
-[1] -1</code></pre>
+[1] -7
+
+[1] &quot;Question numéro 6&quot;
+$Question
+[1] &quot;10 + 1 * 4 - 1 / 1 = ?&quot;
+
+$Réponse
+[1] 13
+
+[1] &quot;Question numéro 7&quot;
+$Question
+[1] &quot;4 + 8 - 8 * 6 * 4 = ?&quot;
+
+$Réponse
+[1] -180
+
+[1] &quot;Question numéro 8&quot;
+$Question
+[1] &quot;2 - 8 - 5 - 2 ** 6 = ?&quot;
+
+$Réponse
+[1] -75
+
+[1] &quot;Question numéro 9&quot;
+$Question
+[1] &quot;2 + 6 + 9 + 4 + 3 = ?&quot;
+
+$Réponse
+[1] 24
+
+[1] &quot;Question numéro 10&quot;
+$Question
+[1] &quot;2 - 9 - 8 * 1 - 2 = ?&quot;
+
+$Réponse
+[1] -17</code></pre>
 </div>
 <h1 id="division">2. DIVISION</h1>
-<h1 id="function-1">2.1 Function</h1>
+<h1 id="fonction-1">2.1 Fonction</h1>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
@@ -2264,6 +2299,8 @@ hide
 <span>    <span class='op'>}</span></span>
 <span>  <span class='op'>}</span></span>
 <span>  <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>Diviseurs</span><span class='op'>)</span><span class='op'>==</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>    <span class='va'>Nombre</span> <span class='op'>=</span> <span class='st'>"Nombre premier"</span></span>
+<span>  <span class='op'>}</span><span class='kw'>else</span> <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>Diviseurs</span><span class='op'>)</span><span class='op'>==</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>{</span></span>
 <span>    <span class='va'>Nombre</span> <span class='op'>=</span> <span class='st'>"Nombre premier"</span></span>
 <span>  <span class='op'>}</span><span class='kw'>else</span> <span class='kw'>if</span><span class='op'>(</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>Diviseurs</span><span class='op'>)</span><span class='op'><a href='https://rdrr.io/r/base/Arithmetic.html'>%%</a></span><span class='fl'>2</span><span class='op'>)</span><span class='op'>!=</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span></span>
 <span>    <span class='va'>Nombre</span> <span class='op'>=</span> <span class='st'>"Nombre carré"</span></span>
@@ -2289,7 +2326,7 @@ hide
 <span>  <span class='va'>it</span> <span class='op'>&lt;-</span> <span class='fl'>1</span></span>
 <span>  <span class='kw'>while</span><span class='op'>(</span><span class='va'>it</span> <span class='op'>&lt;=</span> <span class='va'>n</span><span class='op'>)</span><span class='op'>{</span></span>
 <span>    <span class='va'>n1</span> <span class='op'>=</span> <span class='fl'>1</span>; <span class='va'>n2</span> <span class='op'>=</span> <span class='fl'>1</span></span>
-<span>    <span class='kw'>while</span><span class='op'>(</span><span class='fu'>Diviseurs.Communs</span><span class='op'>(</span><span class='va'>n1</span>,<span class='va'>n2</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span><span class='op'>==</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>    <span class='kw'>while</span><span class='op'>(</span><span class='fu'>Diviseurs.Communs</span><span class='op'>(</span><span class='va'>n1</span>,<span class='va'>n2</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span><span class='op'>==</span><span class='fl'>1</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'>Diviseurs.Communs</span><span class='op'>(</span><span class='va'>n1</span>,<span class='va'>n2</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span><span class='op'>&lt;</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>{</span></span>
 <span>      <span class='va'>n1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/timeDate/man/base-sample.html'>sample</a></span><span class='op'>(</span><span class='va'>rangelow</span><span class='op'>:</span><span class='va'>rangehigh</span>,<span class='fl'>1</span><span class='op'>)</span></span>
 <span>      <span class='va'>n2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/timeDate/man/base-sample.html'>sample</a></span><span class='op'>(</span><span class='va'>rangelow</span><span class='op'>:</span><span class='va'>rangehigh</span>,<span class='fl'>1</span><span class='op'>)</span></span>
 <span>    <span class='op'>}</span></span>
@@ -2299,7 +2336,7 @@ hide
 <span>  <span class='op'>}</span></span>
 <span><span class='op'>}</span></span>
 <span></span>
-<span><span class='va'>Ex.diviseurs</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>n</span><span class='op'>=</span><span class='fl'>1</span>,<span class='va'>rangelow</span><span class='op'>=</span><span class='fl'>1</span>,<span class='va'>rangehigh</span><span class='op'>=</span><span class='fl'>400</span><span class='op'>)</span><span class='op'>{</span></span>
+<span><span class='va'>Ex.diviseurs</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>n</span><span class='op'>=</span><span class='fl'>1</span>,<span class='va'>rangelow</span><span class='op'>=</span><span class='fl'>2</span>,<span class='va'>rangehigh</span><span class='op'>=</span><span class='fl'>400</span><span class='op'>)</span><span class='op'>{</span></span>
 <span>  <span class='va'>it</span> <span class='op'>&lt;-</span> <span class='fl'>1</span></span>
 <span>  <span class='kw'>while</span><span class='op'>(</span><span class='va'>it</span> <span class='op'>&lt;=</span> <span class='va'>n</span><span class='op'>)</span><span class='op'>{</span></span>
 <span>    <span class='va'>n1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/timeDate/man/base-sample.html'>sample</a></span><span class='op'>(</span><span class='va'>rangelow</span><span class='op'>:</span><span class='va'>rangehigh</span>,<span class='fl'>1</span><span class='op'>)</span></span>
@@ -2319,40 +2356,75 @@ hide
 hide
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>Ex.diviseurs</span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>1</span>,<span class='fl'>200</span><span class='op'>)</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>Ex.diviseurs</span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>2</span>,<span class='fl'>300</span><span class='op'>)</span></span></code></pre>
 </div>
 </details>
-<pre><code>[1] &quot;Question 1: Quel sont les diviseurs de 107? Quel genre de nombre est-ce?&quot;
+<pre><code>[1] &quot;Question 1: Quel sont les diviseurs de 84? Quel genre de nombre est-ce?&quot;
 $Diviseurs
-[1]   1 107
-
-$Type
-[1] &quot;Nombre premier&quot;
-
-[1] &quot;Question 2: Quel sont les diviseurs de 105? Quel genre de nombre est-ce?&quot;
-$Diviseurs
-[1]   1   3   5   7  15  21  35 105
+ [1]  1  2  3  4  6  7 12 14 21 28 42 84
 
 $Type
 [1] &quot;Nombre rectangle&quot;
 
-[1] &quot;Question 3: Quel sont les diviseurs de 73? Quel genre de nombre est-ce?&quot;
+[1] &quot;Question 2: Quel sont les diviseurs de 271? Quel genre de nombre est-ce?&quot;
 $Diviseurs
-[1]  1 73
+[1]   1 271
 
 $Type
 [1] &quot;Nombre premier&quot;
 
-[1] &quot;Question 4: Quel sont les diviseurs de 149? Quel genre de nombre est-ce?&quot;
+[1] &quot;Question 3: Quel sont les diviseurs de 132? Quel genre de nombre est-ce?&quot;
 $Diviseurs
-[1]   1 149
+ [1]   1   2   3   4   6  11  12  22  33  44  66 132
 
 $Type
-[1] &quot;Nombre premier&quot;
+[1] &quot;Nombre rectangle&quot;
 
-[1] &quot;Question 5: Quel sont les diviseurs de 191? Quel genre de nombre est-ce?&quot;
+[1] &quot;Question 4: Quel sont les diviseurs de 172? Quel genre de nombre est-ce?&quot;
 $Diviseurs
-[1]   1 191
+[1]   1   2   4  43  86 172
+
+$Type
+[1] &quot;Nombre rectangle&quot;
+
+[1] &quot;Question 5: Quel sont les diviseurs de 94? Quel genre de nombre est-ce?&quot;
+$Diviseurs
+[1]  1  2 47 94
+
+$Type
+[1] &quot;Nombre rectangle&quot;
+
+[1] &quot;Question 6: Quel sont les diviseurs de 174? Quel genre de nombre est-ce?&quot;
+$Diviseurs
+[1]   1   2   3   6  29  58  87 174
+
+$Type
+[1] &quot;Nombre rectangle&quot;
+
+[1] &quot;Question 7: Quel sont les diviseurs de 258? Quel genre de nombre est-ce?&quot;
+$Diviseurs
+[1]   1   2   3   6  43  86 129 258
+
+$Type
+[1] &quot;Nombre rectangle&quot;
+
+[1] &quot;Question 8: Quel sont les diviseurs de 256? Quel genre de nombre est-ce?&quot;
+$Diviseurs
+[1]   1   2   4   8  16  32  64 128 256
+
+$Type
+[1] &quot;Nombre carré&quot;
+
+[1] &quot;Question 9: Quel sont les diviseurs de 220? Quel genre de nombre est-ce?&quot;
+$Diviseurs
+ [1]   1   2   4   5  10  11  20  22  44  55 110 220
+
+$Type
+[1] &quot;Nombre rectangle&quot;
+
+[1] &quot;Question 10: Quel sont les diviseurs de 283? Quel genre de nombre est-ce?&quot;
+$Diviseurs
+[1]   1 283
 
 $Type
 [1] &quot;Nombre premier&quot;</code></pre>
@@ -2364,43 +2436,78 @@ $Type
 hide
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>Ex.diviseurs.communs</span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>1</span>,<span class='fl'>200</span><span class='op'>)</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>Ex.diviseurs.communs</span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>1</span>,<span class='fl'>200</span><span class='op'>)</span></span></code></pre>
 </div>
 </details>
-<pre><code>[1] &quot;Question 1: Quel sont les diviseurs communs et le plus grand diviseur commun de 126 et 128?&quot;
+<pre><code>[1] &quot;Question 1: Quel sont les diviseurs communs et le plus grand diviseur commun de 60 et 144?&quot;
 $`A. Diviseurs communs`
-[1] 1 2
+[1]  1  2  3  4  6 12
 
 $`B. Plus grand diviseur commun`
-[1] 2
+[1] 12
 
-[1] &quot;Question 2: Quel sont les diviseurs communs et le plus grand diviseur commun de 36 et 170?&quot;
+[1] &quot;Question 2: Quel sont les diviseurs communs et le plus grand diviseur commun de 68 et 132?&quot;
 $`A. Diviseurs communs`
-[1] 1 2
+[1] 1 2 4
 
 $`B. Plus grand diviseur commun`
-[1] 2
+[1] 4
 
-[1] &quot;Question 3: Quel sont les diviseurs communs et le plus grand diviseur commun de 177 et 57?&quot;
+[1] &quot;Question 3: Quel sont les diviseurs communs et le plus grand diviseur commun de 152 et 184?&quot;
 $`A. Diviseurs communs`
-[1] 1 3
+[1] 1 2 4 8
 
 $`B. Plus grand diviseur commun`
-[1] 3
+[1] 8
 
-[1] &quot;Question 4: Quel sont les diviseurs communs et le plus grand diviseur commun de 93 et 165?&quot;
+[1] &quot;Question 4: Quel sont les diviseurs communs et le plus grand diviseur commun de 116 et 108?&quot;
 $`A. Diviseurs communs`
-[1] 1 3
+[1] 1 2 4
 
 $`B. Plus grand diviseur commun`
-[1] 3
+[1] 4
 
-[1] &quot;Question 5: Quel sont les diviseurs communs et le plus grand diviseur commun de 90 et 124?&quot;
+[1] &quot;Question 5: Quel sont les diviseurs communs et le plus grand diviseur commun de 48 et 176?&quot;
 $`A. Diviseurs communs`
-[1] 1 2
+[1]  1  2  4  8 16
 
 $`B. Plus grand diviseur commun`
-[1] 2</code></pre>
+[1] 16
+
+[1] &quot;Question 6: Quel sont les diviseurs communs et le plus grand diviseur commun de 10 et 170?&quot;
+$`A. Diviseurs communs`
+[1]  1  2  5 10
+
+$`B. Plus grand diviseur commun`
+[1] 10
+
+[1] &quot;Question 7: Quel sont les diviseurs communs et le plus grand diviseur commun de 90 et 30?&quot;
+$`A. Diviseurs communs`
+[1]  1  2  3  5  6 10 15 30
+
+$`B. Plus grand diviseur commun`
+[1] 30
+
+[1] &quot;Question 8: Quel sont les diviseurs communs et le plus grand diviseur commun de 58 et 116?&quot;
+$`A. Diviseurs communs`
+[1]  1  2 29 58
+
+$`B. Plus grand diviseur commun`
+[1] 58
+
+[1] &quot;Question 9: Quel sont les diviseurs communs et le plus grand diviseur commun de 16 et 104?&quot;
+$`A. Diviseurs communs`
+[1] 1 2 4 8
+
+$`B. Plus grand diviseur commun`
+[1] 8
+
+[1] &quot;Question 10: Quel sont les diviseurs communs et le plus grand diviseur commun de 120 et 42?&quot;
+$`A. Diviseurs communs`
+[1] 1 2 3 6
+
+$`B. Plus grand diviseur commun`
+[1] 6</code></pre>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

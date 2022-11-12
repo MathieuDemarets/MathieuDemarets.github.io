@@ -24,7 +24,7 @@ library(stringr)
 
 # 1 PEMDAS
 
-## 1.1 Function
+## 1.1 Fonction
 
 ```{r Ex1, echo=FALSE}
 calcul_create <- function(n_terms=3,limit=10){
@@ -58,12 +58,12 @@ Ex.PEMDAS <- function(n_questions=3,n_terms=3,limit=10){
 ## 1.2 Exercices
 
 ```{r, echo=TRUE}
-Ex.PEMDAS(5,5,10)
+Ex.PEMDAS(10,5,10)
 ```
 
 # 2. DIVISION
 
-# 2.1 Function
+# 2.1 Fonction
 
 ```{r Ex2, echo=FALSE}
 Diviseurs <- function(n){
@@ -80,6 +80,8 @@ Diviseurs <- function(n){
     }
   }
   if(length(Diviseurs)==2){
+    Nombre = "Nombre premier"
+  }else if(length(Diviseurs)==1){
     Nombre = "Nombre premier"
   }else if((length(Diviseurs)%%2)!=0){
     Nombre = "Nombre carré"
@@ -105,7 +107,7 @@ Ex.diviseurs.communs <- function(n=1,rangelow=1,rangehigh=400){
   it <- 1
   while(it <= n){
     n1 = 1; n2 = 1
-    while(Diviseurs.Communs(n1,n2)[[2]]==1){
+    while(Diviseurs.Communs(n1,n2)[[2]]==1 | length(Diviseurs.Communs(n1,n2)[[1]])<3){
       n1 <- sample(rangelow:rangehigh,1)
       n2 <- sample(rangelow:rangehigh,1)
     }
@@ -115,7 +117,7 @@ Ex.diviseurs.communs <- function(n=1,rangelow=1,rangehigh=400){
   }
 }
 
-Ex.diviseurs <- function(n=1,rangelow=1,rangehigh=400){
+Ex.diviseurs <- function(n=1,rangelow=2,rangehigh=400){
   it <- 1
   while(it <= n){
     n1 <- sample(rangelow:rangehigh,1)
@@ -131,11 +133,11 @@ Ex.diviseurs <- function(n=1,rangelow=1,rangehigh=400){
 ### 2.2.1 Diviseurs
 
 ```{r}
-Ex.diviseurs(5,1,200)
+Ex.diviseurs(10,2,300)
 ```
 
 ### 2.2.2 Diviseurs Communs
 
 ```{r, echo=TRUE}
-Ex.diviseurs.communs(5,1,200)
+Ex.diviseurs.communs(10,1,200)
 ```
