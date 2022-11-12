@@ -1,0 +1,17 @@
+name: "Distill Publish"
+title: "My Website"
+description: |
+  My Website
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: 
+  distill::distill_article:
+    toc: TRUE
+    toc_float: TRUE
+    number_sections: FALSE
+    code_folding: hide
