@@ -4,6 +4,9 @@ description: |
   My Data Analytics Portfolio
 output_dir: "docs"
 navbar:
+  logo:
+    image: logo.jpg
+  search: TRUE
   right:
     - text: "Home"
       href: index.html
@@ -13,6 +16,8 @@ navbar:
           href: about.html
         - text: "Exercices Generation"
           href: Questions.html
+    - logo:
+      image: Rstud.png
 output: 
   distill::distill_article:
     toc: TRUE
