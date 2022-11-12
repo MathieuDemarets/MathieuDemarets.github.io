@@ -1,7 +1,7 @@
 ---
-title: "About this site"
+title: "Marginal Impact of Practitioners"
 description: |
-  Some additional details about the website
+  Sizing and use case to develop non linear models.
 ---
 
 ```{r setup, include=FALSE}
@@ -23,6 +23,10 @@ library(stringr)
 ```
 
 # 1. Goal of the research
+
+<aside>
+**Effective Altruism** is a movement that tries to understand how to have the greatest impact for a given effort.
+</aside>
 
 This quantitative research has been sparked by the book **Doing Good Better** which claimed that the marginal effect of being a physician in Western Europe was lesser than being a physician in Africa for example. The hypothesis is thus that the amount of `Physician Per Capita` has a diminishing marginal effect on the `Life Expectancy at Birth`.
 
@@ -61,6 +65,8 @@ plot_ly(
     xaxis = list(title="Amount of physician per 1000 capita"),
     yaxis = list(title="Life expectancy")
   )
+library(rmarkdown)
+paged_table(Graph_data[,c(1,3:4)])
 ```
 
 # 3. Log-Log specification
@@ -106,6 +112,8 @@ plot_ly(
 
 We will end this report with a comparative numerical example of the marginal utility of an additional physician in `Belgium` and in `Papua New Guinea`.
 
+## 4.1 Belgium
+
 ```{r}
 # BELGIUM
 Country <- "Belgium"
@@ -119,6 +127,8 @@ impact_years <- (impact_le-Graph_data$Impact[which(Graph_data$`Country Name.x`==
 impact_lifes <- impact_years/Graph_data$Impact[which(Graph_data$`Country Name.x`==Country)]
 print(impact_lifes)
 ```
+
+## 4.2 Papua New Guinea
 
 ```{r}
 # PAPUA NEW GUINEA
@@ -141,9 +151,9 @@ We found a linear relationship by using the log-log specification but we should 
 ```{r}
 library(ggplot2)
 
-ggplot(Graph_data,aes(round(X_per_1000,2),round(Impact,2)))+
+ggplotly(ggplot(Graph_data,aes(round(X_per_1000,2),round(Impact,2)))+
   geom_point() +
-  stat_smooth(method="lm", formula = "y ~ log(x)", se=FALSE)
+  stat_smooth(method="lm", formula = "y ~ log(x)", se=FALSE))
 ```
 
 With the next chunk, we will define a non-linear prediction function and use maximum likelihood function to find the betas of the non-linear model. The biggest advantage of the model is that it takes into account the fact that `Life Expectancy` seems to flatten after a certain point.

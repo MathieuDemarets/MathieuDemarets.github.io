@@ -7,8 +7,12 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Use Cases"
+      menu:
+        - text: "Marginal Impact of Practitioners"
+          href: about.html
+        - text: "Exercices Generation"
+          href: Questions.Rmd
 output: 
   distill::distill_article:
     toc: TRUE
