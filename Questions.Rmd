@@ -36,7 +36,7 @@ calcul_create <- function(n_terms=3,limit=10){
     n <- n+1
   }
   answer <- eval(parse(text=expression))
-  return(list(Question=paste(expression,"= ?"),Réponse=round(answer,0)))
+  return(list(Question=paste(expression,"= ?"),Réponse=answer))
 }
 
 easy_question <- function(n_terms=3,limit=10){
@@ -58,7 +58,7 @@ Ex.PEMDAS <- function(n_questions=3,n_terms=3,limit=10){
 ## 1.2 Exercices
 
 ```{r, echo=TRUE}
-Ex.PEMDAS(5,3,10)
+Ex.PEMDAS(5,5,10)
 ```
 
 # 2. DIVISION
@@ -114,10 +114,28 @@ Ex.diviseurs.communs <- function(n=1,rangelow=1,rangehigh=400){
     it <- it+1
   }
 }
+
+Ex.diviseurs <- function(n=1,rangelow=1,rangehigh=400){
+  it <- 1
+  while(it <= n){
+    n1 <- sample(rangelow:rangehigh,1)
+    print(paste0("Question ",it,": Quel sont les diviseurs de ",n1,"? Quel genre de nombre est-ce?"))
+    print(Diviseurs(n1)[1:2])
+    it <- it+1
+  } 
+}
 ```
 
 ## 2.2 Exercices
 
+### 2.2.1 Diviseurs
+
+```{r}
+Ex.diviseurs(5,1,200)
+```
+
+### 2.2.2 Diviseurs Communs
+
 ```{r, echo=TRUE}
-  Ex.diviseurs.communs(5,0,200)
+Ex.diviseurs.communs(5,1,200)
 ```

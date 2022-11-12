@@ -3,7 +3,7 @@
     "path": "~/SOLVAY/MEMOIRE/3. Deliverable/Distill Publish/MathieuDemarets.github.io/Questions.Rmd",
     "project_path": "Questions.Rmd",
     "type": "r_markdown",
-    "hash": "1621308206",
+    "hash": "966006798",
     "contents": "",
     "dirty": false,
     "created": 1668266945727.0,
@@ -11,14 +11,17 @@
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "121,59",
+        "scrollLine": "92",
+        "last_setup_crc32": "6A5465AD1d0376e3"
     },
     "folds": "",
-    "lastKnownWriteTime": 1668264430,
+    "lastKnownWriteTime": 1668270436,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1668264430,
+    "last_content_update": 1668270436558,
     "read_only": false,
     "read_only_alternatives": []
 }
