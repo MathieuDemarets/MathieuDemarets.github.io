@@ -1,0 +1,123 @@
+---
+title: "Exercices Generation"
+description: |
+  Building an exercice generator for PEMDAS and DIVISOR drills in the context of Schola ULB
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(magrittr) #chained commands
+library(readxl) #import excel
+library(dplyr) #mutate
+library(stringr) #str_replace
+library(plyr) #revalue
+library(GGally) #ggpairs
+library(ggplot2)
+library(rstatix)
+library(hrbrthemes)
+library(plotly)
+library(timeDate)
+library(tidyr)
+library(formula.tools)
+library(stringr)
+```
+
+# 1 PEMDAS
+
+## 1.1 Function
+
+```{r Ex1, echo=FALSE}
+calcul_create <- function(n_terms=3,limit=10){
+  operations <- c("+","-","*","/","**")
+  expression <- as.character(sample(1:limit,1))
+  n <- 1
+  while(n < n_terms){
+    expression <- paste(expression,sample(operations,1),as.character(sample(1:limit,1)))
+    n <- n+1
+  }
+  answer <- eval(parse(text=expression))
+  return(list(Question=paste(expression,"= ?"),Réponse=round(answer,0)))
+}
+
+easy_question <- function(n_terms=3,limit=10){
+  clc <- calcul_create(n_terms,limit)
+  while(clc$Réponse != floor(clc$Réponse) | abs(clc$Réponse) >= 1000 | clc$Réponse == 0){
+    clc <- calcul_create(n_terms,limit)
+  }
+  return(clc)
+}
+
+Ex.PEMDAS <- function(n_questions=3,n_terms=3,limit=10){
+  for(i in 1:n_questions){
+    print(paste("Question numéro",i))
+    print(easy_question(n_terms,limit))
+  }
+}
+```
+
+## 1.2 Exercices
+
+```{r, echo=TRUE}
+Ex.PEMDAS(5,3,10)
+```
+
+# 2. DIVISION
+
+# 2.1 Function
+
+```{r Ex2, echo=FALSE}
+Diviseurs <- function(n){
+  if(n==0){return("0 is not accepted")}
+  Diviseurs <- c(NULL)
+  Nombre <- NA
+  for(i in 1:abs(n)){
+    if(abs(n) %% i==0){
+      if(n<0){
+        Diviseurs <- append(Diviseurs,(-i),length(Diviseurs))
+      }else{
+        Diviseurs <- append(Diviseurs,i,length(Diviseurs))
+      }
+    }
+  }
+  if(length(Diviseurs)==2){
+    Nombre = "Nombre premier"
+  }else if((length(Diviseurs)%%2)!=0){
+    Nombre = "Nombre carré"
+  }else{
+    Nombre = "Nombre rectangle"
+  }
+  return(list(Diviseurs=Diviseurs,Type=Nombre,PGD=Diviseurs[abs(Diviseurs)==max(abs(Diviseurs))]))
+}
+
+Diviseurs.Communs <- function(n1,n2){
+  if(n1==0 | n2==0){return("0 is not accepted")}
+  return(list(
+    "A. Diviseurs communs"= Diviseurs(n1)[[1]][abs(Diviseurs(n1)[[1]]) %in% abs(Diviseurs(n2)[[1]])],
+    "B. Plus grand diviseur commun"= ifelse(
+      n1<0 & n2<0,
+      -max(abs(Diviseurs(n1)[[1]][abs(Diviseurs(n1)[[1]]) %in% abs(Diviseurs(n2)[[1]])])),
+      max(abs(Diviseurs(n1)[[1]][abs(Diviseurs(n1)[[1]]) %in% abs(Diviseurs(n2)[[1]])]))
+    )
+  ))
+}
+
+Ex.diviseurs.communs <- function(n=1,rangelow=1,rangehigh=400){
+  it <- 1
+  while(it <= n){
+    n1 = 1; n2 = 1
+    while(Diviseurs.Communs(n1,n2)[[2]]==1){
+      n1 <- sample(rangelow:rangehigh,1)
+      n2 <- sample(rangelow:rangehigh,1)
+    }
+    print(paste0("Question ",it,": Quel sont les diviseurs communs et le plus grand diviseur commun de ",n1," et ",n2,"?"))
+    print(Diviseurs.Communs(n1,n2))
+    it <- it+1
+  }
+}
+```
+
+## 2.2 Exercices
+
+```{r, echo=TRUE}
+  Ex.diviseurs.communs(5,0,200)
+```
